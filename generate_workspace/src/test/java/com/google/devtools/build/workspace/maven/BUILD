@@ -21,3 +21,14 @@ java_test(
         "@org_mockito_mockito_all//jar",
     ],
 )
+
+java_binary(
+    name = "RangeReq",
+    srcs = ["RangeReq.java"],
+    deps = [
+        "//generate_workspace/src/main/java/com/google/devtools/build/workspace/maven",
+        "//third_party:aether",
+        "//third_party:maven_model",
+        "@com_google_guava_guava//jar",
+    ],
+)
